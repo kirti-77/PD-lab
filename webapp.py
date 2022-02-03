@@ -21,7 +21,7 @@ st.subheader('Training Dataset')
 st.write(df.describe())
 
 
-#train data. Fun!
+#train data.
 x = df.drop(['Outcome'], axis = 1)
 y = df.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size = 0.2, random_state = 0)
@@ -91,7 +91,7 @@ if user_result[0]==0:
 else:
   color = 'red'
 
-#Good old glucose
+
 st.header('Radius Value Graph (Yours vs Others)')
 fig_Radius = plt.figure()
 ax3 = sns.scatterplot(x = 'Age', y = 'Radius', data = df, hue = 'Outcome' , palette='Purples')
@@ -102,7 +102,7 @@ plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Radius)
 
 
-#Insulin
+
 st.header('Texture Value Graph (Yours vs Others)')
 fig_Texture = plt.figure()
 ax9 = sns.scatterplot(x = 'Age', y = 'Texture', data = df, hue = 'Outcome', palette='rainbow')
@@ -113,7 +113,7 @@ plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Texture)
 
 
-#Famous saying BP
+
 st.header('Perimeter Value Graph (Yours vs Others)')
 fig_Perimeter = plt.figure()
 ax5 = sns.scatterplot(x = 'Age', y = 'Perimeter', data = df, hue = 'Outcome', palette='Blues')
@@ -124,7 +124,7 @@ plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Perimeter)
 
 
-#Did'nt even know this before nutrition training 
+
 st.header('Area Value Graph (Yours vs Others)')
 fig_Area = plt.figure()
 ax11 = sns.scatterplot(x = 'Age', y = 'Area', data = df, hue = 'Outcome', palette='Greens')
@@ -135,7 +135,6 @@ plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Area)
 
 
-#Something new, cool
 st.header('Smoothness Value Graph (Yours vs Others)')
 fig_Smoothness = plt.figure()
 ax13 = sns.scatterplot(x = 'Age', y = 'Smoothness', data = df, hue = 'Outcome', palette='rocket')
@@ -146,7 +145,6 @@ plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Smoothness)
 
 
-#Don't even know how thats related to diabetes.The dataset was females only though
 st.header('Compactness count Graph (Yours vs Others)')
 fig_Compactness = plt.figure()
 ax1 = sns.scatterplot(x = 'Age', y = 'Compactness', data = df, hue = 'Outcome', palette = 'magma')
@@ -157,7 +155,7 @@ plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Compactness)
 
 
-#Wonder how people measure that 
+
 st.header('Concavity Value Graph (Yours vs Others)')
 fig_Concavity = plt.figure()
 ax7 = sns.scatterplot(x = 'Age', y = 'Concavity', data = df, hue = 'Outcome', palette='Reds')
@@ -202,7 +200,7 @@ st.pyplot(fig_FractalDimension)
 
 
 
-#Finally!
+
 st.subheader('Your Report: ')
 output=''
 if user_result[0]==0:

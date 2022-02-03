@@ -81,7 +81,7 @@ user_result = rf.predict(user_data)
 
 
 
-#Visualizations, this is where the beauty begins.
+#Visualization
 st.title('Graphical Patient Report')
 
 
